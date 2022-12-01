@@ -1,6 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
-
+/* 본문 스타일 */
 body {
   background-color: bisque;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -10,22 +10,48 @@ body {
   font-weight: 300;
 }
 
+/* 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* 헤더 */
 .header {
   background-color: pink;
+  padding: 0 30px;
+  height: 15vh;
 }
 
+/* 비주얼 */
 .visual {
-  background-color: lightgreen;
+  background-color: orange;
+  height: 10vh;
 }
 
+/* 메인 */
 .main {
-  background-color: cornflowerblue;
+  background-color: lightgreen;
+  height: 50vh;
 }
 
+/* 슬로건 */
 .slogan {
   background-color: skyblue;
+  height: 10vh;
 }
 
+/* 푸터 */
 .footer {
-  background-color: orange;
+  background-color: gray;
+}
+
+.footer-inner {
+  height: 15vh;
+  background-color: silver;
 }
