@@ -44,33 +44,9 @@ body {
 .main {
   background-color: lightgreen;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
-}
-
-/* 가상요소 */
-/* .main::before {
-  content: "첫번째 자식 요소입니다.";
-}
-
-.main::after {
-  content: "마지막 자식 요소입니다.";
-} */
-
-/* 마크업에 clearfix div를 만들었을때 */
-/* .clearfix {
-  clear: both;
-} */
-
-/* .main::after {
-  content: "";
-  clear: both;
-  display: block;
-} */
-
-.group {
-  margin: 0 15px;
-  float: left;
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-direction: row;
 }
 
 .group1 {
