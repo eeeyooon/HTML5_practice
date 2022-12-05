@@ -9,9 +9,16 @@
   box-sizing: border-box;
 }
 
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 본문 스타일 */
 body {
-  background: #ffc;
+  color: #212121;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -69,7 +76,6 @@ body {
   content: ":";
 }
 
-*/
 
 /* .member li:nth-child(n + 2):before {
   content: "\e800";
@@ -82,6 +88,11 @@ body {
   margin-right: 0.2em;
   text-align: center;
 } */
+
+/* .member li 상속방법도 있지만 직접 주는게 더좋음. */
+.member a {
+  text-transform: uppercase;
+}
 
 /* 비주얼 */
 .visual {
