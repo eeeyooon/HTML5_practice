@@ -69,6 +69,19 @@ body {
   content: ":";
 }
 
+*/
+
+/* .member li:nth-child(n + 2):before {
+  content: "\e800";
+  font-family: fontello;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+} */
 
 /* 비주얼 */
 .visual {
