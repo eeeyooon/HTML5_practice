@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+/* 10px를 주는걸 권장하진 않지만 실습 위해서 */
+html {
+  font-size: 10px;
+}
+
 /* 링크 스타일 */
 a {
   color: inherit;
@@ -15,6 +20,9 @@ a {
 
 /* 본문 스타일 */
 body {
+  /* em, rem 단위를 사용해보기
+  여기서 Root Element는 HTML. rem은 상속과는 상관x */
+  font-size: 1.4rem;
   color: #212121;
   background-color: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
@@ -38,7 +46,6 @@ body {
 .header {
   background-color: #fff;
   padding: 0 30px;
-  height: 15vh;
   border-radius: 0 0 15px 15px;
   position: relative;
 }
