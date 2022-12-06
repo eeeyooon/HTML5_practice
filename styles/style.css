@@ -36,7 +36,8 @@ body {
   여기서 Root Element는 HTML. rem은 상속과는 상관x */
   font-size: 1.4rem;
   color: #212121;
-  background-color: #ccc;
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -101,7 +102,12 @@ body {
 }
 
 /* 메인 메뉴 */
+.navigation {
+  padding-bottom: 80px;
+}
+
 .menu {
+  border-top: 2px solid currentColor;
   background-color: cornflowerblue;
   background: #e85e2c
     linear-gradient(
@@ -111,6 +117,25 @@ body {
       #e85e2c 70%,
       #ef9126 100%
     );
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+  padding-left: 230px;
+}
+
+/* 이 방법도 있음. */
+/* .menu-item:first-child {
+  margin-left: 235px;
+} */
+
+.menu-item {
+  background-color: yellowgreen;
+  float: left;
+}
+
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
 }
 
 /* 비주얼 */
@@ -154,7 +179,8 @@ body {
 
 /* 푸터 */
 .footer {
-  background-color: gray;
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 
 .footer-inner {
