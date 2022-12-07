@@ -229,9 +229,27 @@ body {
 }
 
 /* 비주얼 */
+/* 애니메이션을 시작할거라고 표시 
+애니메이션의 시작점 표시 : 0%, from
+애니메이션의 종료점 표시 : 100%, to */
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+  }
+  100% {
+    font-size: 24px;
+  }
+}
+
 .visual {
-  background-color: orange;
-  height: 10vh;
+  background-color: pink;
+  height: 120px;
+}
+
+.visual-text {
+  background-color: cornflowerblue;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
 }
 
 /* 메인 */
