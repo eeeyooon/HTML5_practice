@@ -68,6 +68,8 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  /* 메뉴가 position 속성때문에 떠있고, 그 뒤에 로고 이미지가 가있었음. 그래서 z-index로 앞으로. */
+  z-index: 1;
 }
 
 /* 텍스트 링크 모음 */
