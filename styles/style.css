@@ -235,12 +235,16 @@ body {
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.2);
+    /* color: rgba(0, 0, 0, 0.2); */
+    color: hsla(0, 0%, 0%, 0);
+    /* 위에 코드 안보이지만 적혀있음... */
     transform: translate(0, 0);
   }
   100% {
     font-size: 24px;
-    color: rgba(0, 0, 0, 1);
+    /* color: rgba(0, 0, 0, 1); */
+    color: hsla(0, 0, 0, 1);
+    /* 위에 코드 있음. */
     transform: translate(400px, 75px);
   }
 }
@@ -248,6 +252,8 @@ body {
 .visual {
   background-color: pink;
   height: 120px;
+  position: relative;
+  /* 이번엔 .visual-text에 absoulte설정으로 박스늘어나는 것 해결 */
 }
 
 .visual-text {
@@ -256,8 +262,11 @@ body {
   animation-name: moveEffect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
   /* 상자 늘어나지 못하게 */
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  /* 이걸 추가하면 .visual에 relative 추가해야함. */
 }
 
 /* 메인 */
