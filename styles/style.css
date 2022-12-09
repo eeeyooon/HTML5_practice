@@ -3,7 +3,8 @@
 @import url(./reset.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -314,19 +315,29 @@ body {
 
   /* 상자 늘어나지 못하게 */
   /* display: inline-block; */
+
   /* 이걸 추가하면 .visual에 relative 추가해야함. */
   /* position: absolute; */
+
   /* 가상요소선택자 추가하면서 relative */
+
+  /* absolute, relative 다 가능함.
+  relative를 준 이유는 z-index로 ::after 올리려고
+  display:inline-block도 함께줘도 됨 
+  
+  그거 아니면 그냥 absolute만 줘도 됨! (두가지방식)
+  */
   position: relative;
   z-index: 1;
 }
 
 /* 메인 */
 .main {
-  background-color: lightgreen;
-  height: 50vh;
+  background-color: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group {
@@ -335,7 +346,6 @@ body {
 }
 
 .group1 {
-  background-color: violet;
   width: 250px;
 }
 .group2 {
@@ -345,6 +355,90 @@ body {
 .group3 {
   background-color: gold;
   width: 190px;
+}
+
+/* 로그인 영억 */
+
+.login {
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  box-shadow: 5px 5px 0 0 #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+}
+
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  width: 4em;
+  /* 4em = 4글자 크기만큼 넣어라. */
+  display: inline-block;
+}
+
+.login-form input {
+  display: inline-block;
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.sign a {
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: "\e804";
+  color: orangered;
+  font-family: "fontello";
+  margin-right: 8px;
 }
 
 /* 슬로건 */
