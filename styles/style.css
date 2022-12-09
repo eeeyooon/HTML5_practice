@@ -423,13 +423,15 @@ body {
   background-color: #fff;
   border-radius: 0 0 5px 5px;
   padding: 4px 10px;
+  flex-flow: row nowrap;
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
 }
 
 .sign a {
-  display: block;
+  display: inline-block;
+  /* padding주기 위해서 inline-block 혹은 block으로. 부모도 inline-block이니까 자식도 맞춰주는 편 */
+  font-size: 14px;
   padding: 6px 0;
   letter-spacing: -1px;
 }
@@ -439,6 +441,33 @@ body {
   color: orangered;
   font-family: "fontello";
   margin-right: 8px;
+}
+
+/* 유효성 검사 배너 */
+
+.validation-list {
+  /* background-color: yellow; */
+  margin-top: 25px;
+  /* 위 로그인의 그림자만큼 줌. */
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  background: url(./images/validation_icon.png) no-repeat 25px 50%,
+    #ccc linear-gradient(to bottom, #ccc, #eee);
+  /* text-align: center; */
+  padding: 8px 15px 8px 55px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
 }
 
 /* 슬로건 */
