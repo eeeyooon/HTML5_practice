@@ -1,6 +1,7 @@
 @import url(./fonts.css);
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden,
@@ -349,7 +350,7 @@ body {
   width: 250px;
 }
 .group2 {
-  background-color: salmon;
+  /* background-color: salmon; */
   width: 380px;
 }
 .group3 {
@@ -535,7 +536,63 @@ body {
   float: left;
 }
 
+/* 검색 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 20px 10px 20px;
+  width: 380px;
+}
 
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  
+}
+
+.form-group {
+  /* background-color: pink; */
+  flex-grow: 1;
+  /* 분홍상자(flex item)가 확대됨. */
+  display: flex;
+  /* 라벨과 input도 늘리기 위해 얘(부모)를 flex로 */
+  padding-right: 10px;
+  align-items: center;
+}
+
+.form-group-label {
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 10px;
+  
+}
+
+.form-group-input {
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* .form-group을 flex로 해놓고 input에 flex-grow를 줘서 입력창이 분홍상자(.form-group영역) 끝까지 늘어나도록. */
+
+  /* min-width: 0;
+  max-width: 100%; */
+  /* 파폭에선 입력창들이 튀어나옴. 이런 이슈들 해결위해 > 해결안됨;*/
+
+}
+
+.search-button {
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  border: 0;
+  height: 24px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
 
 /* 슬로건 */
 .slogan {
