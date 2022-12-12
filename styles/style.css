@@ -446,7 +446,6 @@ body {
 /* 유효성 검사 배너 */
 
 .validation-list {
-  /* background-color: yellow; */
   margin-top: 25px;
   /* 위 로그인의 그림자만큼 줌. */
 }
@@ -469,6 +468,74 @@ body {
 .validation-list a:focus {
   color: #f00;
 }
+
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  /* background-color: yellow; */
+  margin-top: 10px;
+}
+
+.term-list div {
+  /* background-color: pink; */
+  margin-top: 10px;
+  display: flow-root;
+}
+
+ .term-list-subject {
+  /* background-color: lime;  */
+  color: #295E99;
+  font-weight: 500;
+  float: right;
+  /*width 추가*/
+  width: 145px;
+}
+
+.term-list-thumbnail {
+  /* background-color: purple; */
+  float: left;
+}
+
+.term-list-thumbnail img {
+  vertical-align: middle;
+  /* display:block을 했던 것처럼 gap이 사라짐. */
+
+  /* float는 주위 요소 배치에 영향을 줌.
+     (첫번째 이미지 높이때문에 두번째 이미지가 밑으로 못내려감.) */
+  /* 이 문제 해결. float 주체 요소의 부모(div)에게 flow-root 주면, div는 독립적인 공간을 갖게 됨.(분홍색)  */
+}
+
+.term-list-brief {
+  /* background-color: coral; */
+  /*width 추가*/
+  width: 145px;
+  float: right;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
+
+.cross .term-list-subject, .cross .term-list-brief {
+  float: left;
+}
+
+
 
 /* 슬로건 */
 .slogan {
