@@ -564,8 +564,10 @@ body {
 
 .form-group-label {
   font-weight: 600;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   margin-right: 10px;
+  flex-shrink: 0;
+  /* white-space는 꼭 flex item이 아니라도 쓸 수 있는데 flex item일땐 flex-shrink로 해결 가능. */
   
 }
 
@@ -577,14 +579,18 @@ body {
   flex-grow: 1;
   /* .form-group을 flex로 해놓고 input에 flex-grow를 줘서 입력창이 분홍상자(.form-group영역) 끝까지 늘어나도록. */
 
+  min-width: 0;
+  width: 100%;
   /* min-width: 0;
   max-width: 100%; */
-  /* 파폭에선 입력창들이 튀어나옴. 이런 이슈들 해결위해 > 해결안됨;*/
+  /* 파폭에선 입력창들이 튀어나옴. 이런 이슈들 해결위해 > 해결안됨; >> width100%로*/
 
 }
 
 .search-button {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  /* > 이건 flex 아닐 때도 사용 가능. */
+  flex-shrink: 0;
   background-color: #000;
   color: #fff;
   border-radius: 3px;
