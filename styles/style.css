@@ -600,6 +600,80 @@ body {
   font-size: 1.2rem;
 }
 
+/* 공지사항 및 자료실 */
+.board {
+  /* background-color: yellow; */
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-list {
+  /* background-color: lime; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: #e85e2c;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel {
+  /* background-color: pink; */
+  display: none;
+  margin-top: 15px;
+}
+
+.is-select.tab-panel {
+  /*  is-select일때 display:block;함 */
+  display: block;
+}
+/* .is-select가 아닐때 display:none;은 하면 안됨. 
+  그럼 버튼도 패널도 다 사라짐.*/
+
+
+.board-list li {
+  /* background-color: salmon; */
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a {
+  /* background-color: skyblue; */
+  flex-grow: 1;
+  /* flex-grow를 주면서 링크를 클릭할 수 있는 영역이 늘어남. (a의 영역이 여백끝까지 채워짐) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-list time {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.tab-panel .icon-right-open::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
 /* 슬로건 */
 .slogan {
   background-color: skyblue;
